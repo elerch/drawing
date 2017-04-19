@@ -1,66 +1,51 @@
-a, a:visited {
-  color: #07d;
+/*
+ * This used to be in index.html. I believe it's all from dark reader
+    <link rel="stylesheet" href="./literally-canvas-local-storage_files/better.css" type="text/css">
+    <link rel="stylesheet" href="./literally-canvas-local-storage_files/pygments.css" type="text/css">
+    <style id="dark-reader-style" type="text/css">@media screen {
+*/
+/* Leading rule */
+/*html {
+  -webkit-filter: invert(100%) hue-rotate(180deg) brightness(110%) contrast(90%) grayscale(20%) sepia(10%) !important;
+}
+*/
+/* Contrary rule */
+/*img, iframe, video, *:not(object):not(body)>embed, object,
+svg image,
+*[style*="background:url"]:empty, *[style*="background-image:url"]:empty,
+*[style*="background: url"]:empty, *[style*="background-image: url"]:empty {
+  -webkit-filter: invert(100%) hue-rotate(180deg) !important;
+}
+*/
+/* Text contrast */
+/*html {
+  text-shadow: 0 0 0 !important;
+}
+*/
+/* Full screen */
+/**:-webkit-full-screen, *:-webkit-full-screen * {
+  -webkit-filter: none !important;
+}
+*/
+/* Page background */
+/*html {
+  background: rgb(13,13,13) !important;
 }
 
-#pageheader h1 {
-  font-family: 'Finger Paint', cursive;
-  text-align: center;
-  font-weight: normal;
-  font-size: 40px;
-  line-height: 60px;
+    }
+    */
+
+html {
+  /* TODO: make this less hacky */
+  -webkit-filter: invert(100%) hue-rotate(180deg) brightness(110%) contrast(90%) grayscale(20%) sepia(10%);
+  background: rgb(13,13,13);
 }
 
-#pageheader h1 .title-word-1 {
-  color: red;
-}
-
-.literally {
+iterally {
   width: 100%;
   border-radius: 4px;
   -webkit-border-radius: 4px;
   border: 1px solid rgba(0, 0, 0, 0.15);
   margin-bottom: 1em;
   position: relative;
-}
-
-/* roll these back into sphinx-better-theme plz */
-
-body {
-  line-height: 145%;
-}
-
-@media(max-width: 75rem) {
-  header#pageheader, footer#pagefooter, .related, .document {
-    margin: 0 1rem;
-    width: calc(100% - 2rem);
-    width: -moz-calc(100% - 2rem);
-    width: -webkit-calc(100% - 2rem);
-  }
-}
-
-.admonition, .deprecated p {
-  -webkit-border-radius: 5px;
-  border-radius: 5px
-}
-
-.field-list p {
-  margin: 1rem 0;
-}
-
-.field-list p:first-child {
-  margin-top: 0;
-}
-.field-list p:last-child {
-  margin-bottom: 0;
-}
-
-.deprecated p {
-  margin: 10px 0;
-  padding: 7px;
-  background-color: #ffe4e4;
-  border: 1px solid #f66;
-}
-
-code {
-  font-size: 14px;
 }
