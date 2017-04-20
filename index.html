@@ -3,9 +3,8 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Drawpad</title>
-    <link rel="stylesheet" href="./literally-canvas-local-storage_files/css" type="text/css">
     <link rel="stylesheet" href="./literally-canvas-local-storage_files/style.css" type="text/css">
-    <link rel="stylesheet" href="./literally-canvas-local-storage_files/literallycanvas.css" type="text/css">
+    <link rel="stylesheet" href="./literallycanvas-0.4.14/css/literallycanvas.css" type="text/css">
   </head>
   <body>
     <div class="literally localstorage toolbar-at-top"></div>
@@ -14,6 +13,7 @@
     <script src="./literally-canvas-local-storage_files/literallycanvas.js" type="text/javascript"></script>
     <script>
       (function() {
+        LC.setDefaultImageURLPrefix('literallycanvas-0.4.14/img');
         var lc = LC.init(
           document.getElementsByClassName('literally localstorage')[0]);
         var localStorageKey = 'drawing'
