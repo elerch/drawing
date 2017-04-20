@@ -47,3 +47,7 @@ html {
   position: relative;
   height: 90vh;
 }
+
+.literally .lc-picker, .literally.toolbar-at-top .lc-options {
+  background: #777
+}
