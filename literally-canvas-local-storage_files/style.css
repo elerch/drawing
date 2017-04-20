@@ -36,15 +36,12 @@ svg image,
     */
 
 html {
-  /* TODO: make this less hacky */
-  -webkit-filter: invert(100%) hue-rotate(180deg) brightness(110%) contrast(90%) grayscale(20%) sepia(10%);
   background: rgb(13,13,13);
 }
 
 .literally {
   width: 100%;
   border-radius: 4px;
-  -webkit-border-radius: 4px;
   border: 1px solid rgba(0, 0, 0, 0.15);
   margin-bottom: 1em;
   position: relative;

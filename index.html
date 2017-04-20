@@ -16,10 +16,11 @@
     <script src="./literally-canvas-local-storage_files/literallycanvas.js" type="text/javascript"></script>
     <!-- <script src="literallycanvas-0.4.14/js/literallycanvas.min.js" type="text/javascript"></script> -->
     <script>
-      (function() {
+      (document.addEventListener("DOMContentLoaded", function() {
         LC.setDefaultImageURLPrefix('literallycanvas-0.4.14/img');
         var lc = LC.init(
           document.getElementsByClassName('literally localstorage')[0]);
+        lc.setColor('background','333'); window.rm = lc;
         var localStorageKey = 'drawing'
         if (localStorage.getItem(localStorageKey)) {
           lc.loadSnapshot(JSON.parse(localStorage.getItem(localStorageKey)));
@@ -27,7 +28,7 @@
         lc.on('drawingChange', function() {
           localStorage.setItem(localStorageKey, JSON.stringify(lc.getSnapshot()));
         });
-      }()); // FIXME: need non-jQuery browser-agnostic document ready
+      }()));
     </script>
   </body>
 </html>
