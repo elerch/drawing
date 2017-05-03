@@ -18,10 +18,10 @@
     <script>
       (document.addEventListener("DOMContentLoaded", function() {
         LC.setDefaultImageURLPrefix('literallycanvas-0.4.14/img');
-        var lc = LC.init(
+        const lc = LC.init(
           document.getElementsByClassName('literally localstorage')[0]);
         lc.setColor('background','333'); window.rm = lc;
-        var localStorageKey = 'drawing'
+        let localStorageKey = window.location.hash.substr(1) || 'local';
         if (localStorage.getItem(localStorageKey)) {
           lc.loadSnapshot(JSON.parse(localStorage.getItem(localStorageKey)));
         }
